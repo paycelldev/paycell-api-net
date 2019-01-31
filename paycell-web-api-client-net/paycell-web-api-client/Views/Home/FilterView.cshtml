@@ -1,0 +1,31 @@
+﻿@model paycell_web_api_client.Models.ViewModel.ClientFilter
+
+<div class="container">
+
+    @using (Html.BeginForm("CheckRequestType", "Home", FormMethod.Post))
+    {
+
+        switch (ViewBag.requestType)
+        {
+            case "SOAP":
+                <label class="radio-inline" checked>@Html.RadioButton("RequestType", "SOAP") SOAP </label>
+                <label class="radio-inline">@Html.RadioButton("RequestType", "REST") REST </label>
+                break;
+            case "REST":
+                <label class="radio-inline">@Html.RadioButton("RequestType", "SOAP") SOAP </label>
+                <label class="radio-inline" checked>@Html.RadioButton("RequestType", "REST") REST </label>
+                break;
+            default:
+                <label class="radio-inline" checked>@Html.RadioButton("RequestType", "SOAP") SOAP </label>
+                <label class="radio-inline">@Html.RadioButton("RequestType", "REST") REST </label>
+                break;
+        }
+
+
+        <label class="radio-inline">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </label>
+
+    }
+
+</div>

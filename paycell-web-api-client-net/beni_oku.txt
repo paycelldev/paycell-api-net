@@ -1,0 +1,5 @@
+
+Proje import edildikten sonra eger calismazsa 'Solution Explorer' penceresi altindan
+projeye sag tiklanip 'Properties' e girilmeli. Burada 'Web' sekmesinde 'Project Url' icin 
+uygun farkli bir port secilerek kayit islemi gerceklestirip. Kaydediniz. Sonrasinda tekrar
+build edip çalistirmayi deneyin.

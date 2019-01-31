@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+    <title>iPay APM 3D-Secure Processing Page</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("threeDSessionId").value = getCookie("threeDSessionId");
+            document.getElementById("submit").click();
+            debugger;
+            function getCookie(name) {
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length == 2) return parts.pop().split(";").shift();
+            }
+        };
+    </script>
+    <form target="_blank" name="topUpForm" action="https://omccstb.turkcell.com.tr/paymentmanagement/rest/threeDSecure" method="POST">
+        <table>
+            <td>
+                threeDSessionId :
+            </td>
+            <td>
+                <input type="Text" name="threeDSessionId" id="threeDSessionId" size="50" readonly="readonly" />
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    callbackurl :
+                </td>
+                <td>
+                    <input type="Text" name="callbackUrl" value="www.hellom.com" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input id="submit" type="submit" name="submit" Value="Bankaya Gönder" />
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
