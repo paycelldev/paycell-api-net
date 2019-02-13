@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Provision.aspx.cs" Inherits="paycell_web_api_client.App_Code.Provision" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Provision.aspx.cs" Inherits="paycell_web_api_client.Aspx.Provision" %>
 
 <!DOCTYPE html>
 
@@ -22,6 +22,7 @@
             <a class="border" href="ProvisionForMarketPlace.aspx">:  Provision For MarketPlace  :</a>
             <a class="border" href="SummaryReconciliation.aspx">:  Summary Reconciliation  :</a>
             <a class="border" href="GetProvisionHistory.aspx">:  Provision History  :</a>
+            <a class="border" href="ASPX/GetTermsOfServiceContent.aspx">:  Get Terms Of Service Content  :</a>
         </div>
     </div>
 

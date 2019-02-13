@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace paycell_web_api_client {
+namespace paycell_web_api_client.Aspx {
     
     
-    public partial class Inquire {
+    public partial class Provision {
         
         /// <summary>
-        /// inquireForm control.
+        /// provision control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm inquireForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm provision;
         
         /// <summary>
         /// selectedMsisdn control.
@@ -58,138 +58,147 @@ namespace paycell_web_api_client {
         protected global::System.Web.UI.WebControls.TextBox threeDSessionId;
         
         /// <summary>
-        /// originalReferenceNumber control.
+        /// acquirerBankCodeIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox originalReferenceNumber;
+        protected global::System.Web.UI.WebControls.TextBox acquirerBankCodeIn;
         
         /// <summary>
-        /// inquire control.
+        /// currencyIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button inquire;
+        protected global::System.Web.UI.WebControls.DropDownList currencyIn;
         
         /// <summary>
-        /// Label1 control.
+        /// installmentCountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.DropDownList installmentCountIn;
         
         /// <summary>
-        /// acquirerBankCode control.
+        /// paymentTypeIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox acquirerBankCode;
+        protected global::System.Web.UI.WebControls.DropDownList paymentTypeIn;
         
         /// <summary>
-        /// Label3 control.
+        /// Amount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.TextBox Amount;
         
         /// <summary>
-        /// approvalCode control.
+        /// pin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox approvalCode;
+        protected global::System.Web.UI.WebControls.TextBox pin;
         
         /// <summary>
-        /// Label5 control.
+        /// pointAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.TextBox pointAmount;
         
         /// <summary>
-        /// orderId control.
+        /// extraParameterKey control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox orderId;
+        protected global::System.Web.UI.WebControls.TextBox extraParameterKey;
         
         /// <summary>
-        /// Label7 control.
+        /// extraParameterValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.TextBox extraParameterValue;
         
         /// <summary>
-        /// status control.
+        /// AddExtraParameter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox status;
+        protected global::System.Web.UI.WebControls.Button AddExtraParameter;
         
         /// <summary>
-        /// ProvisionsGridView control.
+        /// ProvisionButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ProvisionsGridView;
+        protected global::System.Web.UI.WebControls.Button ProvisionButton;
         
         /// <summary>
-        /// ReverseButton control.
+        /// referanceNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ReverseButton;
+        protected global::System.Web.UI.WebControls.Label referanceNumber;
         
         /// <summary>
-        /// RefundLabel control.
+        /// AcquirerBankCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel RefundLabel;
+        protected global::System.Web.UI.WebControls.Label AcquirerBankCode;
         
         /// <summary>
-        /// amount control.
+        /// ApprovalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox amount;
+        protected global::System.Web.UI.WebControls.Label ApprovalCode;
         
         /// <summary>
-        /// RefundButton control.
+        /// OrderId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RefundButton;
+        protected global::System.Web.UI.WebControls.Label OrderId;
+        
+        /// <summary>
+        /// ReconciliationDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ReconciliationDate;
     }
 }

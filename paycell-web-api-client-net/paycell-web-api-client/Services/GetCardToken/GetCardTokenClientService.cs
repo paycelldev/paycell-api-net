@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using paycell_web_api_client.Services.Base;
 using paycell_web_api_client.Util;
 
@@ -9,6 +10,9 @@ namespace paycell_web_api_client.Services.GetCardToken
 
         public GetCardTokenResponse GetCardToken(GetCardTokenRequest requestObject)
         {
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             GetCardTokenResponse response = RestClient(Constants.GET_CARD_TOKEN_URL, requestObject);
 
             if (response.cardToken == null || response.hashData == null)

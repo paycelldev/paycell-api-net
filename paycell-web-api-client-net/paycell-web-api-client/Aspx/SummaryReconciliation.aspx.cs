@@ -4,9 +4,9 @@ using paycell_web_api_client.Session;
 using System;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client
+namespace paycell_web_api_client.Aspx
 {
-    public partial class SummaryReconciliation : Aspx.BaseAspxPage
+    public partial class SummaryReconciliation : BaseAspxPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

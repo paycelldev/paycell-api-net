@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace paycell_web_api_client {
+namespace paycell_web_api_client.Aspx {
     
     
     public partial class SummaryReconciliation {

@@ -9,7 +9,7 @@ using System;
 using System.Data;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client
+namespace paycell_web_api_client.Aspx
 {
     public partial class Inquire : Aspx.BaseAspxPage
     {

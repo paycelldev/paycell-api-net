@@ -1,12 +1,13 @@
 ﻿using paycell_web_api_client.ProvisionService;
+using paycell_web_api_client.Services.GetTermsOfServiceContent;
 using paycell_web_api_client.Services.RegisterCards;
 using paycell_web_api_client.Session;
 using System;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client
+namespace paycell_web_api_client.Aspx
 {
-    public partial class RegisterCard : Aspx.BaseAspxPage
+    public partial class RegisterCard : BaseAspxPage
     {
 
         protected void Page_Load(object sender, EventArgs e)
@@ -14,6 +15,7 @@ namespace paycell_web_api_client
             ((TextBox)registerCardForm.FindControl("selectedMsisdn")).Text = MySession.Current.msisdn;
             ((TextBox)registerCardForm.FindControl("selectedCardToken")).Text = MySession.Current.cardToken;
             ((TextBox)registerCardForm.FindControl("threeDSessionId")).Text = MySession.Current.threeDSessionId;
+            ((Literal)registerCardForm.FindControl("TermsOfTr")).Text = GetTermsOfServiceContentMethod();
         }
 
         protected void RegisterCardButtonOnClick(Object sender, EventArgs e)
@@ -22,6 +24,18 @@ namespace paycell_web_api_client
             {
                 RegisterCardMethod();
             } else
+            {
+                ShowMessage("Kayıtlı Olmayan Bir Kart Seçimi Yapmadınız!");
+            }
+        }
+
+        protected void ShowTermsOfService_Click(Object sender, EventArgs e)
+        {
+            if (MySession.Current.cardToken != null)
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptsKey", "openDialog();", true);
+            }
+            else
             {
                 ShowMessage("Kayıtlı Olmayan Bir Kart Seçimi Yapmadınız!");
             }
@@ -55,6 +69,27 @@ namespace paycell_web_api_client
                 ShowMessage(ex.Message);
             }
 
+        }
+
+        private String GetTermsOfServiceContentMethod()
+        {
+            GetTermsOfServiceContentClientService client = new GetTermsOfServiceContentClientService();
+            getTermsOfServiceContentResponse response = null;
+            getTermsOfServiceContentRequest request = null;
+
+            GetTermsOfServiceContentRequestFactory factory = new GetTermsOfServiceContentRequestFactory();
+
+            try
+            {
+                request = factory.Build();
+                response = client.OptionalRequest(MySession.Current.requestFilter, request);
+                return response.termsOfServiceHtmlContentTR;
+            }
+            catch (Exception ex)
+            {
+                ShowMessage(ex.Message);
+                return null;
+            }
         }
 
         private bool GetIsDefault()

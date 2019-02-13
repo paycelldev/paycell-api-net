@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetCardsList.aspx.cs" Inherits="paycell_web_api_client.GetCardsList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetCardsList.aspx.cs" Inherits="paycell_web_api_client.Aspx.GetCardsList" %>
 
 <!DOCTYPE html>
 
@@ -10,6 +10,38 @@
         a.border { border-style: double; padding: 5px; }
         a.boldborder {padding-bottom: 15px; font-weight: bold; }
     </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#dialog" ).dialog();
+        $( "#dialog" ).dialog('close');
+        });
+     </script>
+
+     <script type="text/javascript">
+         $(document).ready(function()
+         {
+             $('#<%= rejectButton.ClientID %>').click(function(e) 
+             { 
+                $( "#dialog" ).dialog('close');
+                 
+             });
+         });
+      </script>
+
+    <script>
+        function openDialog() {
+             $(document).ready(function()
+             {
+                $( "#dialog" ).dialog('open').dialog( "option", "width", 1200 );
+             });
+        }
+    </script>
 </head>
 <body>
 
@@ -23,10 +55,28 @@
             <a class="border" href="ProvisionForMarketPlace.aspx">:  Provision For MarketPlace  :</a>
             <a class="border" href="SummaryReconciliation.aspx">:  Summary Reconciliation  :</a>
             <a class="border" href="GetProvisionHistory.aspx">:  Provision History  :</a>
+            <a class="border" href="GetTermsOfServiceContent.aspx">:  Get Terms Of Service Content  :</a>
         </div>
     </div>
 
     <form id="form1" runat="server">
+
+        <div id="dialog" title="Sözleşme Metin Onayı" style="height:100px;width200px;">
+            <table>
+                <tr>
+                    <asp:Literal ID="TermsOfTr" runat="server" Visible="true"></asp:Literal>
+                    <asp:Label ID="TermsOfRow" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="SelectCardId" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="NewAlias" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="NewIsDefault" runat="server" Visible="false"></asp:Label>
+                </tr>
+                <tr>
+                    <td><asp:Button ID="UpdateCardButton" runat="server" Text="Kabul Et" OnClick="UpdateCardButton_Click" UseSubmitBehavior="false" data-dismiss="modal"/></td>
+                    <td><asp:Button ID="rejectButton" runat="server" Text="Reddet" ClientIDMode="Static" OnClientClick="return false;"/></td>
+                </tr>
+            </table>
+               
+        </div>
 
         <div class="double">
         <div>
@@ -166,6 +216,10 @@
 
             <div>
                 <table>
+                    <tr>
+                        <td>Amount : </td>
+                        <td><asp:TextBox ID="ThreeDAmount" runat="server" Enabled="true">253</asp:TextBox></td>
+                    </tr>
                     <tr>
                         <td><asp:Button ID="ThreeDSecureButton" runat="server" OnClick="GetThreeDSessionIdButton_Click" Text="3D SessionId Al" /></td>
                         <td><asp:TextBox ID="ThreeDSecureId" runat="server" Enabled="false"></asp:TextBox></td>

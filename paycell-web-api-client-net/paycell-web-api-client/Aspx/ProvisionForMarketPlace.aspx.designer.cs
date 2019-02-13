@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace paycell_web_api_client.App_Code {
+namespace paycell_web_api_client.Aspx {
     
     
     public partial class ProvisionForMarketPlace {

@@ -7,72 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace paycell_web_api_client {
+namespace paycell_web_api_client.Aspx {
     
     
-    public partial class RegisterCard {
+    public partial class GetTermsOfServiceContent {
         
         /// <summary>
-        /// registerCardForm control.
+        /// form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm registerCardForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// selectedMsisdn control.
+        /// TermsOfServiceButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox selectedMsisdn;
+        protected global::System.Web.UI.WebControls.Button TermsOfServiceButton;
         
         /// <summary>
-        /// selectedCardToken control.
+        /// TRButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox selectedCardToken;
+        protected global::System.Web.UI.WebControls.Button TRButton;
         
         /// <summary>
-        /// threeDSessionId control.
+        /// ENButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox threeDSessionId;
+        protected global::System.Web.UI.WebControls.Button ENButton;
         
         /// <summary>
-        /// alias control.
+        /// TermsOfTr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox alias;
+        protected global::System.Web.UI.WebControls.Literal TermsOfTr;
         
         /// <summary>
-        /// isDefault control.
+        /// TermsOfEn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList isDefault;
-        
-        /// <summary>
-        /// registerCardButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerCardButton;
+        protected global::System.Web.UI.WebControls.Literal TermsOfEn;
     }
 }

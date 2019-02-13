@@ -10,17 +10,14 @@ using System;
 using System.Data;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client
+namespace paycell_web_api_client.Aspx
 {
     public partial class GetCardsList : Aspx.BaseAspxPage
     {
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                LoadSelectedValues();
-            }
+            LoadSelectedValues();
         }
 
         protected void SearchButtonOnClick(Object sender, EventArgs e)
@@ -57,12 +54,11 @@ namespace paycell_web_api_client
             }
         }
 
-
         protected void GetCardsGridView_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            string cardId = GetCardsGridView.Rows[e.NewEditIndex].Cells[1].Text;
+            GetCardsGridView.DataSource = TempDataTable();
+            GetCardsGridView.DataBind();
             GetCardsGridView.EditIndex = e.NewEditIndex;
-
         }
 
         protected void GetCardsGridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -71,20 +67,52 @@ namespace paycell_web_api_client
             string cardId = GetCardsGridView.Rows[e.RowIndex].Cells[1].Text;
             string alias = e.NewValues[0].ToString();
             string threeDSessionId = MySession.Current.threeDSessionId;
+            string showEulaId = GetCardsGridView.Rows[e.RowIndex].Cells[7].Text;
             bool isDefault = BoolParse(e.NewValues[1].ToString());
+            ((Label)form1.FindControl("TermsOfRow")).Text = e.RowIndex.ToString();
+            ((Label)form1.FindControl("SelectCardId")).Text = cardId;
+            ((Label)form1.FindControl("NewAlias")).Text = e.NewValues[0].ToString();
+            ((Label)form1.FindControl("NewIsDefault")).Text = e.NewValues[1].ToString();
 
-            string responseCode = UpdateCard(cardId, msisdn, threeDSessionId, alias, isDefault);
-
-            if (responseCode != "0")
+            if ((showEulaId == "true" || showEulaId == "True"))
             {
-                GetCardsGridView.DataBind();
+                ((Literal)form1.FindControl("TermsOfTr")).Visible = true;
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scriptsKey", "openDialog();", true);
             } else
             {
-                GetCardsGridView.Rows[e.RowIndex].Cells[4].Text = e.NewValues[0].ToString();
-                GetCardsGridView.Rows[e.RowIndex].Cells[5].Text = e.NewValues[1].ToString();
+                string responseCode = UpdateCard(cardId, msisdn, threeDSessionId, alias, isDefault);
+
+                if (responseCode == "0")
+                {
+                    GetCardsGridView.Rows[e.RowIndex].Cells[4].Text = e.NewValues[0].ToString();
+                    GetCardsGridView.Rows[e.RowIndex].Cells[5].Text = e.NewValues[1].ToString();
+                    GetCardsGridView.DataBind();
+                    GetCardsGridView.EditIndex = -1;
+                }
+            }
+
+        }
+
+        protected void UpdateCardButton_Click(object sender, EventArgs e)
+        {
+            ((Literal)form1.FindControl("TermsOfTr")).Visible = false;
+            string msisdn = Request.Form["Msisdn"].ToString();
+            string threeDSessionId = MySession.Current.threeDSessionId;
+            string cardId = ((Label)form1.FindControl("SelectCardId")).Text;
+            string alias = ((Label)form1.FindControl("NewAlias")).Text;
+            int termsOfRow = Int32.Parse(((Label)form1.FindControl("TermsOfRow")).Text);
+            string isDefault = ((Label)form1.FindControl("NewIsDefault")).Text;
+            
+            string responseCode = UpdateCard(cardId, msisdn, threeDSessionId, alias, BoolParse(isDefault));
+
+            if (responseCode == "0")
+            {
+                GetCardsGridView.Rows[termsOfRow].Cells[4].Text = alias;
+                GetCardsGridView.Rows[termsOfRow].Cells[5].Text = isDefault;
                 GetCardsGridView.DataBind();
                 GetCardsGridView.EditIndex = -1;
             }
+
         }
 
         protected void GetCardsGridView_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
@@ -151,7 +179,16 @@ namespace paycell_web_api_client
             factory.request.alias = alias;
             factory.request.msisdn = msisdn;
             factory.request.threeDSessionId = threeDSessionId;
-            factory.request.isDefault = isDefault;
+
+            if (isDefault == false)
+            {
+                factory.request.isDefaultSpecified = false;
+
+            } else
+            {
+                factory.request.isDefaultSpecified = true;
+                factory.request.isDefault = isDefault;
+            }
 
             try
             {
@@ -294,12 +331,14 @@ namespace paycell_web_api_client
             ((TextBox)form1.FindControl("selectedCardId")).Text = cardId;
             ((TextBox)form1.FindControl("selectedCardToken")).Text = cardToken;
             ((TextBox)form1.FindControl("selectedThreeDSessionId")).Text = threeDSessionId;
+            ((Literal)form1.FindControl("TermsOfTr")).Text = GetTermsOfServiceContentMethod();
+            ((Literal)form1.FindControl("TermsOfTr")).Visible = false;
 
         }
 
         protected void GetThreeDSessionIdButton_Click(object sender, EventArgs e)
         {
-            string amount = "253";
+            string amount = ((TextBox)form1.FindControl("ThreeDAmount")).Text;
             string msisdn = MySession.Current.msisdn;
             string cardId = MySession.Current.cardId;
             string cardToken = MySession.Current.cardToken;
@@ -389,6 +428,6 @@ namespace paycell_web_api_client
 
             return null;
         }
-
+        
     }
 }

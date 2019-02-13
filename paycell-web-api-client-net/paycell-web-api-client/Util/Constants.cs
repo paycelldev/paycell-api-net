@@ -36,6 +36,7 @@ namespace paycell_web_api_client.Util
         public const string GET_THREE_D_SESSION_RESULT_URL = "https://tpay-test.turkcell.com.tr/tpay/provision/services/restful/getCardToken/getThreeDSessionResult/";
         public const string GET_PROVISION_HISTORY_URL = "https://tpay-test.turkcell.com.tr/tpay/provision/services/restful/getCardToken/getProvisionHistory";
         public const string PROVISION_FOR_MARKET_PLACE_URL = "https://tpay-test.turkcell.com.tr/tpay/provision/services/restful/getCardToken/provisionForMarketPlace/";
+        public const string GET_TERMS_OF_SERVICE_CONTENT = "https://tpay-test.turkcell.com.tr:443/tpay/provision/services/restful/getCardToken/getTermsOfServiceContent/";
 
     }
 }

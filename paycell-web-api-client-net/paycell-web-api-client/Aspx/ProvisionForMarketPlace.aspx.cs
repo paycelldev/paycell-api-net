@@ -5,9 +5,9 @@ using paycell_web_api_client.Session;
 using System;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client.App_Code
+namespace paycell_web_api_client.Aspx
 {
-    public partial class ProvisionForMarketPlace : Aspx.BaseAspxPage
+    public partial class ProvisionForMarketPlace : BaseAspxPage
     {
         private static System.Collections.Generic.List<extraParameter> extraParameterList = new System.Collections.Generic.List<extraParameter>();
         private static System.Collections.Generic.List<subMerchant> subMerchantList = new System.Collections.Generic.List<subMerchant>();
@@ -36,7 +36,7 @@ namespace paycell_web_api_client.App_Code
             string pointAmount = ((TextBox)form.FindControl("pointAmount")).Text;
 
             provisionForMarketPlaceResponse response = GetProvisionForMarketplace(msisdn, cardId, cardToken, threeDSessionId, amount, customerEmail,
-                 acquirerBankCodeIn, pin, pointAmount);
+                 acquirerBankCodeIn, pin, pointAmount, Int32.Parse(installmentCountIn));
 
             if (response != null && response.responseHeader.responseCode == "0")
             {
@@ -50,7 +50,7 @@ namespace paycell_web_api_client.App_Code
         }
 
         protected provisionForMarketPlaceResponse GetProvisionForMarketplace(string msisdn, string cardId, string cardToken, string threeDSessionId, string amount,
-            string customerEmail, string acquirerBankCodeIn, string pin, string pointAmount)
+            string customerEmail, string acquirerBankCodeIn, string pin, string pointAmount, int installmentCount)
         {
             ProvisionForMarketPlaceRequestFactory factory = new ProvisionForMarketPlaceRequestFactory();
             factory.request.msisdn = msisdn;
@@ -66,6 +66,8 @@ namespace paycell_web_api_client.App_Code
             factory.request.acquirerBankCode = acquirerBankCodeIn;
             factory.request.pin = pin;
             factory.request.pointAmount = pointAmount;
+            factory.request.installmentCountSpecified = true;
+            factory.request.installmentCount = installmentCount;
 
             if (extraParameterList.Capacity > 0)
             {

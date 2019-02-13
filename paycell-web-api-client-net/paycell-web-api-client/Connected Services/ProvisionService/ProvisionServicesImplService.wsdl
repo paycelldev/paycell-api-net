@@ -54,6 +54,7 @@
               <xs:element minOccurs="0" name="installmentCount" type="xs:int" />
               <xs:element minOccurs="0" name="merchantCode" type="xs:string" />
               <xs:element minOccurs="0" name="msisdn" type="xs:string" />
+              <xs:element minOccurs="0" name="originalReferenceNumber" type="xs:string" />
               <xs:element minOccurs="0" name="paymentType" type="tns:paymentType" />
               <xs:element minOccurs="0" name="pin" type="xs:string" />
               <xs:element minOccurs="0" name="pointAmount" type="xs:string" />

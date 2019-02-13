@@ -3,14 +3,10 @@ using paycell_web_api_client.Services.GetProvisionHistory;
 using paycell_web_api_client.Services.Provision;
 using paycell_web_api_client.Session;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client
+namespace paycell_web_api_client.Aspx
 {
     public partial class GetProvisionHistory : System.Web.UI.Page
     {
@@ -27,11 +23,12 @@ namespace paycell_web_api_client
 
             if (response != null && response.responseHeader.responseCode == "0")
             {
-
-                if (response.transactionList.Length > 0)
+                if (response.transactionList != null && response.transactionList.Length > 0)
                 {
                     SetGridView(response.transactionList);
                 }
+
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + response.responseHeader.responseDescription + "');", true);
             }
 
         }

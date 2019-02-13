@@ -4,9 +4,9 @@ using paycell_web_api_client.Session;
 using System;
 using System.Web.UI.WebControls;
 
-namespace paycell_web_api_client.App_Code
+namespace paycell_web_api_client.Aspx
 {
-    public partial class Provision : Aspx.BaseAspxPage
+    public partial class Provision : BaseAspxPage
     {
         private static System.Collections.Generic.List<extraParameter> extraParameterList = new System.Collections.Generic.List<extraParameter>();
 
@@ -60,6 +60,7 @@ namespace paycell_web_api_client.App_Code
             factory.request.cardToken = cardToken;
             factory.request.amount = amount;
             factory.request.currency = currency;
+            factory.request.installmentCountSpecified = true;
             factory.request.installmentCount = installmentCount;
             factory.request.requestHeader.clientIPAddress = "4.4.4.4";
             factory.request.paymentType = type;

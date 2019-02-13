@@ -1,5 +1,6 @@
 ﻿using paycell_web_api_client.Util;
 using System;
+using System.Text.RegularExpressions;
 
 namespace paycell_web_api_client.Services.GetCardToken
 {
@@ -41,7 +42,16 @@ namespace paycell_web_api_client.Services.GetCardToken
         public GetCardTokenRequest Build()
         {
             PreBuild();
-            return request;
+
+            try
+            {
+                Validation();
+                return request;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         private void PreBuild()
@@ -64,6 +74,32 @@ namespace paycell_web_api_client.Services.GetCardToken
 
                 return RequestHeader;
          }
+
+        public void Validation()
+        {
+
+            Regex regex = new Regex("^[0-9]+$");
+
+            if (!regex.IsMatch(request.expireDateMonth) || request.expireDateMonth.Length != 2)
+            {
+                throw new Exception("Hatalı expireDateMonth formatı! Sadece rakam girilmeli ve iki hane olmalı.");
+            }
+
+            if (!regex.IsMatch(request.creditCardNo) || request.creditCardNo.Length != 16)
+            {
+                throw new Exception("Hatalı creditCardNo formatı! Sadece rakam girilmeli ve onaltı hane olmalı.");
+            }
+
+            if (!regex.IsMatch(request.expireDateYear) || request.expireDateYear.Length != 2)
+            {
+                throw new Exception("Hatalı expireDateYear formatı! Sadece rakam girilmeli ve iki hane olmalı.");
+            }
+
+            if (request.cvcNo != "" && (!regex.IsMatch(request.cvcNo) || request.cvcNo.Length != 3))
+            {
+                throw new Exception("Hatalı cvcNo formatı! Sadece rakam girilmeli ve üç hane olmalı.");
+            }
+        }
 
     }
 }

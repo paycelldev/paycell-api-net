@@ -1,5 +1,6 @@
 ﻿using paycell_web_api_client.ProvisionService;
 using paycell_web_api_client.Services.GetCardToken;
+using paycell_web_api_client.Services.GetTermsOfServiceContent;
 using paycell_web_api_client.Session;
 using System;
 using System.Collections.Generic;
@@ -90,6 +91,27 @@ namespace paycell_web_api_client.Aspx
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
             }
 
+        }
+
+        protected String GetTermsOfServiceContentMethod()
+        {
+            GetTermsOfServiceContentClientService client = new GetTermsOfServiceContentClientService();
+            getTermsOfServiceContentResponse response = null;
+            getTermsOfServiceContentRequest request = null;
+
+            GetTermsOfServiceContentRequestFactory factory = new GetTermsOfServiceContentRequestFactory();
+
+            try
+            {
+                request = factory.Build();
+                response = client.OptionalRequest(MySession.Current.requestFilter, request);
+                return response.termsOfServiceHtmlContentTR;
+            }
+            catch (Exception ex)
+            {
+                ShowMessage(ex.Message);
+                return null;
+            }
         }
     }
 } 

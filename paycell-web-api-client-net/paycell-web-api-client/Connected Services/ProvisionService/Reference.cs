@@ -242,6 +242,8 @@ namespace paycell_web_api_client.ProvisionService {
         
         private string msisdnField;
         
+        private string originalReferenceNumberField;
+        
         private paymentType paymentTypeField;
         
         private bool paymentTypeFieldSpecified;
@@ -364,6 +366,18 @@ namespace paycell_web_api_client.ProvisionService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string originalReferenceNumber {
+            get {
+                return this.originalReferenceNumberField;
+            }
+            set {
+                this.originalReferenceNumberField = value;
+                this.RaisePropertyChanged("originalReferenceNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public paymentType paymentType {
             get {
                 return this.paymentTypeField;
@@ -387,7 +401,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string pin {
             get {
                 return this.pinField;
@@ -399,7 +413,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string pointAmount {
             get {
                 return this.pointAmountField;
@@ -411,7 +425,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string referenceNumber {
             get {
                 return this.referenceNumberField;
@@ -423,7 +437,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string threeDSessionId {
             get {
                 return this.threeDSessionIdField;
