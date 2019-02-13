@@ -149,34 +149,41 @@
     <Compile Include="Aspx\BaseAspxPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetProvisionHistory.aspx.cs">
+    <Compile Include="Aspx\GetProvisionHistory.aspx.cs">
       <DependentUpon>GetProvisionHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetProvisionHistory.aspx.designer.cs">
+    <Compile Include="Aspx\GetProvisionHistory.aspx.designer.cs">
       <DependentUpon>GetProvisionHistory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Inquire.aspx.cs">
+    <Compile Include="Aspx\Inquire.aspx.cs">
       <DependentUpon>Inquire.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Inquire.aspx.designer.cs">
+    <Compile Include="Aspx\Inquire.aspx.designer.cs">
       <DependentUpon>Inquire.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModel\ClientFilter.cs" />
-    <Compile Include="ProvisionForMarketPlace.aspx.cs">
+    <Compile Include="Aspx\ProvisionForMarketPlace.aspx.cs">
       <DependentUpon>ProvisionForMarketPlace.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProvisionForMarketPlace.aspx.designer.cs">
+    <Compile Include="Aspx\ProvisionForMarketPlace.aspx.designer.cs">
       <DependentUpon>ProvisionForMarketPlace.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Provision.aspx.cs">
+    <Compile Include="Aspx\Provision.aspx.cs">
       <DependentUpon>Provision.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Provision.aspx.designer.cs">
+    <Compile Include="Aspx\Provision.aspx.designer.cs">
       <DependentUpon>Provision.aspx</DependentUpon>
+    </Compile>
+	<Compile Include="Aspx\GetTermsOfServiceContent.aspx.cs">
+      <DependentUpon>GetTermsOfServiceContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\GetTermsOfServiceContent.aspx.designer.cs">
+      <DependentUpon>GetTermsOfServiceContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -216,11 +223,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="GetCardsList.aspx.cs">
+    <Compile Include="Aspx\GetCardsList.aspx.cs">
       <DependentUpon>GetCardsList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetCardsList.aspx.designer.cs">
+    <Compile Include="Aspx\GetCardsList.aspx.designer.cs">
       <DependentUpon>GetCardsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -234,6 +241,8 @@
     <Compile Include="Services\GetCardToken\GetCardTokenRequestFactory.cs" />
     <Compile Include="Services\GetCardToken\GetCardTokenResponse.cs" />
     <Compile Include="Services\GetProvisionHistory\GetProvisionHistoryRequestFactory.cs" />
+    <Compile Include="Services\GetTermsOfServiceContent\GetTermsOfServiceContentClientService.cs" />
+    <Compile Include="Services\GetTermsOfServiceContent\GetTermsOfServiceContentRequestFactory.cs" />
     <Compile Include="Services\ProvisionForMarketplace\ProvisionForMarketPlaceClientService.cs" />
     <Compile Include="Services\ProvisionForMarketplace\ProvisionForMarketPlaceRequestFactory.cs" />
     <Compile Include="Services\GetProvisionHistory\GetProvisionHistoryClientService.cs" />
@@ -254,11 +263,11 @@
     <Compile Include="Services\UpdateCard\UpdateCardClientService.cs" />
     <Compile Include="Services\UpdateCard\UpdateCardRequestFactory.cs" />
     <Compile Include="Session\MySession.cs" />
-    <Compile Include="SummaryReconciliation.aspx.cs">
+    <Compile Include="Aspx\SummaryReconciliation.aspx.cs">
       <DependentUpon>SummaryReconciliation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SummaryReconciliation.aspx.designer.cs">
+    <Compile Include="Aspx\SummaryReconciliation.aspx.designer.cs">
       <DependentUpon>SummaryReconciliation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tests\GetThreeDSessionResultTest.cs" />
@@ -282,19 +291,20 @@
     <Compile Include="Tests\RegisterCardTest.cs" />
     <Compile Include="Util\Constants.cs" />
     <Compile Include="Util\UniqueIdGenerator.cs" />
-    <Compile Include="RegisterCard.aspx.cs">
+    <Compile Include="Aspx\RegisterCard.aspx.cs">
       <DependentUpon>RegisterCard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RegisterCard.aspx.designer.cs">
+    <Compile Include="Aspx\RegisterCard.aspx.designer.cs">
       <DependentUpon>RegisterCard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GetProvisionHistory.aspx" />
-    <Content Include="Inquire.aspx" />
-    <Content Include="ProvisionForMarketPlace.aspx" />
-    <Content Include="Provision.aspx" />
+    <Content Include="Aspx\GetProvisionHistory.aspx" />
+    <Content Include="Aspx\Inquire.aspx" />
+    <Content Include="Aspx\ProvisionForMarketPlace.aspx" />
+    <Content Include="Aspx\Provision.aspx" />
+    <Content Include="Aspx\GetTermsOfServiceContent.aspx" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Connected Services\ProvisionService\paycell_web_api_client.ProvisionService.deleteCardResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -430,7 +440,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Compile Include="Global.asax.cs" />
-    <Content Include="GetCardsList.aspx" />
+    <Content Include="Aspx\GetCardsList.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -459,12 +469,13 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="RegisterCard.aspx" />
-    <Content Include="securePage.html" />
-    <Content Include="SummaryReconciliation.aspx" />
+    <Content Include="Aspx\RegisterCard.aspx" />
+    <Content Include="Aspx\securePage.html" />
+    <Content Include="Aspx\SummaryReconciliation.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
