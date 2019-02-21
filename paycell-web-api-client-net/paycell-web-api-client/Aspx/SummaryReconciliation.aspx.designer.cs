@@ -22,22 +22,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.HtmlControls.HtmlForm summaryReconciliationForm;
         
         /// <summary>
-        /// Submit control.
+        /// reconciliationDateIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit;
-        
-        /// <summary>
-        /// reconciliationDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox reconciliationDate;
+        protected global::System.Web.UI.WebControls.TextBox reconciliationDateIn;
         
         /// <summary>
         /// reconciliationResult control.
@@ -49,13 +40,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.WebControls.TextBox reconciliationResult;
         
         /// <summary>
-        /// totalSaleAmount control.
+        /// totalSaleAmountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totalSaleAmount;
+        protected global::System.Web.UI.WebControls.TextBox totalSaleAmountIn;
         
         /// <summary>
         /// totalSaleAmountRes control.
@@ -67,13 +58,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.WebControls.TextBox totalSaleAmountRes;
         
         /// <summary>
-        /// totalSaleCount control.
+        /// totalSaleCountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totalSaleCount;
+        protected global::System.Web.UI.WebControls.TextBox totalSaleCountIn;
         
         /// <summary>
         /// totalSaleCountRes control.
@@ -85,13 +76,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.WebControls.TextBox totalSaleCountRes;
         
         /// <summary>
-        /// totalReverseAmount control.
+        /// totalReverseAmountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totalReverseAmount;
+        protected global::System.Web.UI.WebControls.TextBox totalReverseAmountIn;
         
         /// <summary>
         /// totalReverseAmountRes control.
@@ -103,13 +94,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.WebControls.TextBox totalReverseAmountRes;
         
         /// <summary>
-        /// totalReverseCount control.
+        /// totalReverseCountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totalReverseCount;
+        protected global::System.Web.UI.WebControls.TextBox totalReverseCountIn;
         
         /// <summary>
         /// totalReverseCountRes control.
@@ -121,13 +112,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.WebControls.TextBox totalReverseCountRes;
         
         /// <summary>
-        /// totalRefundAmount control.
+        /// totalRefundAmountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totalRefundAmount;
+        protected global::System.Web.UI.WebControls.TextBox totalRefundAmountIn;
         
         /// <summary>
         /// totalRefundAmountRes control.
@@ -139,13 +130,13 @@ namespace paycell_web_api_client.Aspx {
         protected global::System.Web.UI.WebControls.TextBox totalRefundAmountRes;
         
         /// <summary>
-        /// totalRefundCount control.
+        /// totalRefundCountIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totalRefundCount;
+        protected global::System.Web.UI.WebControls.TextBox totalRefundCountIn;
         
         /// <summary>
         /// totalRefundCountRes control.
@@ -155,5 +146,158 @@ namespace paycell_web_api_client.Aspx {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox totalRefundCountRes;
+        
+        /// <summary>
+        /// totalPostAuthAmountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthAmountIn;
+        
+        /// <summary>
+        /// totalPostAuthAmountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthAmountRes;
+        
+        /// <summary>
+        /// totalPostAuthCountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthCountIn;
+        
+        /// <summary>
+        /// totalPostAuthCountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthCountRes;
+        
+        /// <summary>
+        /// totalPostAuthReverseAmountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthReverseAmountIn;
+        
+        /// <summary>
+        /// totalPostAuthReverseAmountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthReverseAmountRes;
+        
+        /// <summary>
+        /// totalPostAuthReverseCountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthReverseCountIn;
+        
+        /// <summary>
+        /// totalPostAuthReverseCountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPostAuthReverseCountRes;
+        
+        /// <summary>
+        /// totalPreAuthAmountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthAmountIn;
+        
+        /// <summary>
+        /// totalPreAuthAmountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthAmountRes;
+        
+        /// <summary>
+        /// totalPreAuthCountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthCountIn;
+        
+        /// <summary>
+        /// totalPreAuthCountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthCountRes;
+        
+        /// <summary>
+        /// totalPreAuthReverseAmountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthReverseAmountIn;
+        
+        /// <summary>
+        /// totalPreAuthReverseAmountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthReverseAmountRes;
+        
+        /// <summary>
+        /// totalPreAuthReverseCountIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthReverseCountIn;
+        
+        /// <summary>
+        /// totalPreAuthReverseCountRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox totalPreAuthReverseCountRes;
+        
+        /// <summary>
+        /// Submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit;
     }
 }

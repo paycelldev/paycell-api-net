@@ -315,6 +315,14 @@
           <xs:element minOccurs="0" name="merchantCode" type="xs:string" />
           <xs:element minOccurs="0" name="reconciliationDate" type="xs:string" />
           <xs:element minOccurs="0" name="requestHeader" type="tns:requestHeader" />
+          <xs:element minOccurs="0" name="totalPostAuthAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPostAuthCount" type="xs:int" />
+          <xs:element minOccurs="0" name="totalPostAuthReverseAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPostAuthReverseCount" type="xs:int" />
+          <xs:element minOccurs="0" name="totalPreAuthAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPreAuthCount" type="xs:int" />
+          <xs:element minOccurs="0" name="totalPreAuthReverseAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPreAuthReverseCount" type="xs:int" />
           <xs:element minOccurs="0" name="totalRefundAmount" type="xs:string" />
           <xs:element minOccurs="0" name="totalRefundCount" type="xs:int" />
           <xs:element minOccurs="0" name="totalReverseAmount" type="xs:string" />
@@ -329,6 +337,14 @@
           <xs:element minOccurs="0" name="reconciliationDate" type="xs:string" />
           <xs:element minOccurs="0" name="reconciliationResult" type="xs:string" />
           <xs:element minOccurs="0" name="responseHeader" type="tns:responseHeader" />
+          <xs:element minOccurs="0" name="totalPostAuthAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPostAuthCount" type="xs:int" />
+          <xs:element minOccurs="0" name="totalPostAuthReverseAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPostAuthReverseCount" type="xs:int" />
+          <xs:element minOccurs="0" name="totalPreAuthAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPreAuthCount" type="xs:int" />
+          <xs:element minOccurs="0" name="totalPreAuthReverseAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPreAuthReverseCount" type="xs:int" />
           <xs:element minOccurs="0" name="totalRefundAmount" type="xs:string" />
           <xs:element minOccurs="0" name="totalRefundCount" type="xs:int" />
           <xs:element minOccurs="0" name="totalReverseAmount" type="xs:string" />

@@ -1027,6 +1027,30 @@ namespace paycell_web_api_client.ProvisionService {
         
         private responseHeader responseHeaderField;
         
+        private string totalPostAuthAmountField;
+        
+        private int totalPostAuthCountField;
+        
+        private bool totalPostAuthCountFieldSpecified;
+        
+        private string totalPostAuthReverseAmountField;
+        
+        private int totalPostAuthReverseCountField;
+        
+        private bool totalPostAuthReverseCountFieldSpecified;
+        
+        private string totalPreAuthAmountField;
+        
+        private int totalPreAuthCountField;
+        
+        private bool totalPreAuthCountFieldSpecified;
+        
+        private string totalPreAuthReverseAmountField;
+        
+        private int totalPreAuthReverseCountField;
+        
+        private bool totalPreAuthReverseCountFieldSpecified;
+        
         private string totalRefundAmountField;
         
         private int totalRefundCountField;
@@ -1095,6 +1119,150 @@ namespace paycell_web_api_client.ProvisionService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string totalPostAuthAmount {
+            get {
+                return this.totalPostAuthAmountField;
+            }
+            set {
+                this.totalPostAuthAmountField = value;
+                this.RaisePropertyChanged("totalPostAuthAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int totalPostAuthCount {
+            get {
+                return this.totalPostAuthCountField;
+            }
+            set {
+                this.totalPostAuthCountField = value;
+                this.RaisePropertyChanged("totalPostAuthCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPostAuthCountSpecified {
+            get {
+                return this.totalPostAuthCountFieldSpecified;
+            }
+            set {
+                this.totalPostAuthCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPostAuthCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string totalPostAuthReverseAmount {
+            get {
+                return this.totalPostAuthReverseAmountField;
+            }
+            set {
+                this.totalPostAuthReverseAmountField = value;
+                this.RaisePropertyChanged("totalPostAuthReverseAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int totalPostAuthReverseCount {
+            get {
+                return this.totalPostAuthReverseCountField;
+            }
+            set {
+                this.totalPostAuthReverseCountField = value;
+                this.RaisePropertyChanged("totalPostAuthReverseCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPostAuthReverseCountSpecified {
+            get {
+                return this.totalPostAuthReverseCountFieldSpecified;
+            }
+            set {
+                this.totalPostAuthReverseCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPostAuthReverseCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string totalPreAuthAmount {
+            get {
+                return this.totalPreAuthAmountField;
+            }
+            set {
+                this.totalPreAuthAmountField = value;
+                this.RaisePropertyChanged("totalPreAuthAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int totalPreAuthCount {
+            get {
+                return this.totalPreAuthCountField;
+            }
+            set {
+                this.totalPreAuthCountField = value;
+                this.RaisePropertyChanged("totalPreAuthCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPreAuthCountSpecified {
+            get {
+                return this.totalPreAuthCountFieldSpecified;
+            }
+            set {
+                this.totalPreAuthCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPreAuthCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string totalPreAuthReverseAmount {
+            get {
+                return this.totalPreAuthReverseAmountField;
+            }
+            set {
+                this.totalPreAuthReverseAmountField = value;
+                this.RaisePropertyChanged("totalPreAuthReverseAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int totalPreAuthReverseCount {
+            get {
+                return this.totalPreAuthReverseCountField;
+            }
+            set {
+                this.totalPreAuthReverseCountField = value;
+                this.RaisePropertyChanged("totalPreAuthReverseCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPreAuthReverseCountSpecified {
+            get {
+                return this.totalPreAuthReverseCountFieldSpecified;
+            }
+            set {
+                this.totalPreAuthReverseCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPreAuthReverseCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string totalRefundAmount {
             get {
                 return this.totalRefundAmountField;
@@ -1106,7 +1274,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public int totalRefundCount {
             get {
                 return this.totalRefundCountField;
@@ -1130,7 +1298,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public string totalReverseAmount {
             get {
                 return this.totalReverseAmountField;
@@ -1142,7 +1310,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public int totalReverseCount {
             get {
                 return this.totalReverseCountField;
@@ -1166,7 +1334,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
         public string totalSaleAmount {
             get {
                 return this.totalSaleAmountField;
@@ -1178,7 +1346,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
         public int totalSaleCount {
             get {
                 return this.totalSaleCountField;
@@ -1226,6 +1394,30 @@ namespace paycell_web_api_client.ProvisionService {
         private string reconciliationDateField;
         
         private requestHeader requestHeaderField;
+        
+        private string totalPostAuthAmountField;
+        
+        private int totalPostAuthCountField;
+        
+        private bool totalPostAuthCountFieldSpecified;
+        
+        private string totalPostAuthReverseAmountField;
+        
+        private int totalPostAuthReverseCountField;
+        
+        private bool totalPostAuthReverseCountFieldSpecified;
+        
+        private string totalPreAuthAmountField;
+        
+        private int totalPreAuthCountField;
+        
+        private bool totalPreAuthCountFieldSpecified;
+        
+        private string totalPreAuthReverseAmountField;
+        
+        private int totalPreAuthReverseCountField;
+        
+        private bool totalPreAuthReverseCountFieldSpecified;
         
         private string totalRefundAmountField;
         
@@ -1295,6 +1487,150 @@ namespace paycell_web_api_client.ProvisionService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string totalPostAuthAmount {
+            get {
+                return this.totalPostAuthAmountField;
+            }
+            set {
+                this.totalPostAuthAmountField = value;
+                this.RaisePropertyChanged("totalPostAuthAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int totalPostAuthCount {
+            get {
+                return this.totalPostAuthCountField;
+            }
+            set {
+                this.totalPostAuthCountField = value;
+                this.RaisePropertyChanged("totalPostAuthCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPostAuthCountSpecified {
+            get {
+                return this.totalPostAuthCountFieldSpecified;
+            }
+            set {
+                this.totalPostAuthCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPostAuthCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string totalPostAuthReverseAmount {
+            get {
+                return this.totalPostAuthReverseAmountField;
+            }
+            set {
+                this.totalPostAuthReverseAmountField = value;
+                this.RaisePropertyChanged("totalPostAuthReverseAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int totalPostAuthReverseCount {
+            get {
+                return this.totalPostAuthReverseCountField;
+            }
+            set {
+                this.totalPostAuthReverseCountField = value;
+                this.RaisePropertyChanged("totalPostAuthReverseCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPostAuthReverseCountSpecified {
+            get {
+                return this.totalPostAuthReverseCountFieldSpecified;
+            }
+            set {
+                this.totalPostAuthReverseCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPostAuthReverseCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string totalPreAuthAmount {
+            get {
+                return this.totalPreAuthAmountField;
+            }
+            set {
+                this.totalPreAuthAmountField = value;
+                this.RaisePropertyChanged("totalPreAuthAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int totalPreAuthCount {
+            get {
+                return this.totalPreAuthCountField;
+            }
+            set {
+                this.totalPreAuthCountField = value;
+                this.RaisePropertyChanged("totalPreAuthCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPreAuthCountSpecified {
+            get {
+                return this.totalPreAuthCountFieldSpecified;
+            }
+            set {
+                this.totalPreAuthCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPreAuthCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string totalPreAuthReverseAmount {
+            get {
+                return this.totalPreAuthReverseAmountField;
+            }
+            set {
+                this.totalPreAuthReverseAmountField = value;
+                this.RaisePropertyChanged("totalPreAuthReverseAmount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public int totalPreAuthReverseCount {
+            get {
+                return this.totalPreAuthReverseCountField;
+            }
+            set {
+                this.totalPreAuthReverseCountField = value;
+                this.RaisePropertyChanged("totalPreAuthReverseCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalPreAuthReverseCountSpecified {
+            get {
+                return this.totalPreAuthReverseCountFieldSpecified;
+            }
+            set {
+                this.totalPreAuthReverseCountFieldSpecified = value;
+                this.RaisePropertyChanged("totalPreAuthReverseCountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string totalRefundAmount {
             get {
                 return this.totalRefundAmountField;
@@ -1306,7 +1642,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public int totalRefundCount {
             get {
                 return this.totalRefundCountField;
@@ -1330,7 +1666,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public string totalReverseAmount {
             get {
                 return this.totalReverseAmountField;
@@ -1342,7 +1678,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public int totalReverseCount {
             get {
                 return this.totalReverseCountField;
@@ -1366,7 +1702,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
         public string totalSaleAmount {
             get {
                 return this.totalSaleAmountField;
@@ -1378,7 +1714,7 @@ namespace paycell_web_api_client.ProvisionService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
         public int totalSaleCount {
             get {
                 return this.totalSaleCountField;

@@ -8,6 +8,8 @@
     <style>
         div.double {border-style: double; padding: 15px;}
         a.border { border-style: double; padding: 5px; }
+        th.wid {width:300px;}
+        th.wid1 {width:50px;}
     </style>
 </head>
 <body>
@@ -27,64 +29,137 @@
     </div>
 
     <form id="summaryReconciliationForm" runat="server">
-        <div>
-            <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click"/>
-        </div>
 
         <div>
-
             <table border="1">
             <tr>
+                <th class="wid">Merchant Information</th>
+                <th class="wid1"></th>
+                <th class="wid">System Information</th>
+                <th class="wid1"></th>
+            </tr>
+            <tr>
                 <td><asp:Label runat="server">Reconciliation Date:  </asp:Label></td>
-                <td><asp:TextBox ID="reconciliationDate" runat="server">20160404</asp:TextBox></td>
+                <td><asp:TextBox ID="reconciliationDateIn" runat="server">20160404</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Reconciliation Result:  </asp:Label></td>
                 <td><asp:TextBox ID="reconciliationResult" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
             <tr>
                 <td><asp:Label runat="server">Total Sale Amount:  </asp:Label></td>
-                <td><asp:TextBox ID="totalSaleAmount" runat="server">0</asp:TextBox></td>
+                <td><asp:TextBox ID="totalSaleAmountIn" runat="server">0</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Response Total Sale Amount:  </asp:Label></td>
                 <td><asp:TextBox ID="totalSaleAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
             <tr>
                 <td><asp:Label runat="server">Total Sale Count:  </asp:Label></td>
-                <td><asp:TextBox ID="totalSaleCount" runat="server">0</asp:TextBox></td>
+                <td><asp:TextBox ID="totalSaleCountIn" runat="server">0</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Response Total Sale Count:  </asp:Label></td>
                 <td><asp:TextBox ID="totalSaleCountRes" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
             <tr>
                 <td><asp:Label runat="server">Total Reverse Amount:  </asp:Label></td>
-                <td><asp:TextBox ID="totalReverseAmount" runat="server">0</asp:TextBox></td>
+                <td><asp:TextBox ID="totalReverseAmountIn" runat="server">0</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Response Total Reverse Amount:  </asp:Label></td>
                 <td><asp:TextBox ID="totalReverseAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
             <tr>
                 <td><asp:Label runat="server">Total Reverse Count:  </asp:Label></td>
-                <td><asp:TextBox ID="totalReverseCount" runat="server">0</asp:TextBox></td>
+                <td><asp:TextBox ID="totalReverseCountIn" runat="server">0</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Response Total Reverse Count:  </asp:Label></td>
                 <td><asp:TextBox ID="totalReverseCountRes" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
             <tr>
                 <td><asp:Label runat="server">Total Refund Amount:  </asp:Label></td>
-                <td><asp:TextBox ID="totalRefundAmount" runat="server">0</asp:TextBox></td>
+                <td><asp:TextBox ID="totalRefundAmountIn" runat="server">0</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Response Total Refund Amount:  </asp:Label></td>
                 <td><asp:TextBox ID="totalRefundAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
             <tr>
                 <td><asp:Label runat="server">Total Refund Count:  </asp:Label></td>
-                <td><asp:TextBox ID="totalRefundCount" runat="server">0</asp:TextBox></td>
+                <td><asp:TextBox ID="totalRefundCountIn" runat="server">0</asp:TextBox></td>
 
                 <td><asp:Label runat="server">Response Total Refund Count:  </asp:Label></td>
                 <td><asp:TextBox ID="totalRefundCountRes" runat="server" Enabled="false"></asp:TextBox></td>
             </tr>
         </table>
         </div>
+        <div>
+            <table border="1">
+                <tr>
+                    <th class="wid"></th>
+                    <th class="wid1"></th>
+                    <th class="wid"></th>
+                    <th class="wid1"></th>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Post Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthAmountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Response Total Post Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Post Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthCountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Response Total Post Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthCountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Post Auth Reverse Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthReverseAmountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Total Post Auth Reverse Amount Res:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthReverseAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Post Auth Reverse Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthReverseCountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Total Post Auth Reverse Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPostAuthReverseCountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Pre Auth Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthAmountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Response Total Pre Auth Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Pre Auth Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthCountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Response Total Pre Auth Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthCountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Pre Auth Reverse Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthReverseAmountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Response Total Pre Auth Reverse Amount:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthReverseAmountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><asp:Label runat="server">Total Pre Auth Reverse Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthReverseCountIn" runat="server"></asp:TextBox></td>
+
+                    <td><asp:Label runat="server">Response Total Pre Auth Count:  </asp:Label></td>
+                    <td><asp:TextBox ID="totalPreAuthReverseCountRes" runat="server" Enabled="false"></asp:TextBox></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <asp:Button ID="Submit" runat="server" Text="Summary Reconciliation" OnClick="Submit_Click"/>
+        </div>
+
     </form>
 </body>
 </html>
